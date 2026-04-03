@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACVIM 貓心肌病 (CM) 分類與治療管理指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .stage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Modal 動畫過渡 */
+        .modal-enter {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        .modal-enter-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="smooth-scroll antialiased text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-12 shadow-lg">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">🐱 ACVIM 貓心肌病 (Cardiomyopathy) 共識指南</h1>
+            <p class="text-lg md:text-xl text-blue-100 mb-6">基於美國獸醫內科醫學院 (ACVIM) 2020 年發布之分類、診斷與管理綜合回顧</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="#phenotypes" class="bg-white/20 hover:bg-white/30 transition px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">表型分類</a>
+                <a href="#staging" class="bg-white/20 hover:bg-white/30 transition px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">A-D 分期系統</a>
+                <a href="#management" class="bg-white/20 hover:bg-white/30 transition px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">治療與管理</a>
+                <a href="#emergencies" class="bg-white/20 hover:bg-white/30 transition px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">急診處置 (CHF/ATE)</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-10 max-w-5xl">
+
+        <!-- 0. 基本概念 -->
+        <section id="definition" class="mb-12 scroll-mt-24">
+            <div class="bg-slate-50 p-6 md:p-8 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-slate-400"></div>
+                <h2 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    什麼是貓心肌病？ (核心定義)
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-3">
+                    <strong>心肌病（Cardiomyopathy）</strong>的定義是心肌結構和功能發生異常的疾病。在臨床診斷上，最關鍵的原則是：這種異常<span class="text-rose-600 font-semibold px-1">無法以冠狀動脈疾病、高血壓、瓣膜疾病、心包疾病或先天性心臟病來充分解釋</span>。因此，在下達原發性心肌病的診斷前，優先排除這些潛在問題是極為重要的步驟。
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    心肌病與顯著的臨床發病率高度相關，貓咪常見的嚴重併發症包括：<strong>心衰竭 (Heart Failure)</strong>、<strong>心律不整 (Arrhythmias)</strong>、<strong>動脈血栓併發症 (Arterial Thromboembolism, ATE)</strong> 以及 <strong>心因性猝死 (Sudden Cardiac Death)</strong>。
+                </p>
+            </div>
+        </section>
+
+        <!-- 1. 表型分類 -->
+        <section id="phenotypes" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="bg-blue-100 p-3 rounded-lg text-blue-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-1 inline-block">貓心肌病的主要表型分類</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 border-l-4 border-l-blue-500 relative">
+                    <h3 class="text-xl font-bold text-blue-700 mb-2 flex items-center justify-between">
+                        <span>HCM (肥厚型心肌病)</span>
+                        <!-- 改為觸發 Javascript 彈出視窗的按鈕 -->
+                        <button onclick="openTool()" title="開啟 HCM 鑑別診斷工具" class="text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 hover:text-blue-900 px-3 py-1.5 rounded-full transition-colors flex items-center gap-1 shadow-sm font-bold border border-blue-200">
+                            鑑別診斷工具
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </button>
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-3">臨床最常見的貓心肌病 (約佔 15%)。</p>
+                    <ul class="list-disc pl-5 text-gray-700 text-sm space-y-1">
+                        <li><strong>特徵：</strong> 左心室壁 (LV) 局部或瀰漫性增厚 (舒張期厚度 ≥ 6mm)。</li>
+                        <li><strong>結構變化：</strong> 左心室腔室未擴張，常伴隨左心房 (LA) 擴大。</li>
+                        <li><strong>SAM：</strong> 二尖瓣前葉於收縮期發生前向運動 (Systolic anterior motion)，造成左心室流出道阻塞 (LVOTO)。</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 border-l-4 border-l-indigo-500">
+                    <h3 class="text-xl font-bold text-indigo-700 mb-2">RCM (限制型心肌病)</h3>
+                    <p class="text-gray-600 text-sm mb-3">以舒張功能嚴重受損為特徵。</p>
+                    <ul class="list-disc pl-5 text-gray-700 text-sm space-y-1">
+                        <li><strong>心內膜型：</strong> 明顯的心內膜疤痕化，可能導致心室中段阻塞 (Midventricular obstruction)。</li>
+                        <li><strong>心肌型：</strong> 左心室壁厚度及腔室大小正常。</li>
+                        <li><strong>共同點：</strong> 通常伴隨嚴重的左心房或雙心房擴大。</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 border-l-4 border-l-purple-500">
+                    <h3 class="text-xl font-bold text-purple-700 mb-2">DCM (擴張型心肌病)</h3>
+                    <p class="text-gray-600 text-sm mb-3">以收縮功能障礙為主。</p>
+                    <ul class="list-disc pl-5 text-gray-700 text-sm space-y-1">
+                        <li><strong>特徵：</strong> 進行性心室擴張，左心室壁厚度正常或變薄。</li>
+                        <li><strong>注意：</strong> 需排除牛磺酸缺乏 (Taurine deficiency) 造成的繼發性擴張，特別是餵食非商業自製飲食或不均衡生食的貓咪。</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 border-l-4 border-l-teal-500">
+                    <h3 class="text-xl font-bold text-teal-700 mb-2">ARVC & NFC</h3>
+                    <p class="text-gray-600 text-sm mb-3">其他較罕見或非特異性之分型。</p>
+                    <ul class="list-disc pl-5 text-gray-700 text-sm space-y-1">
+                        <li><strong>ARVC (致心律不整性右心室心肌病)：</strong> 右心室擴大、室壁變薄且由脂肪及纖維組織取代，常伴隨心律不整。</li>
+                        <li><strong>NFC (非特異性表型)：</strong> 心臟超音波顯示異常，但無法明確歸類於上述任何一種表型。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                <p class="text-sm text-yellow-800"><strong>💡 重要鑑別診斷：TMT (暫時性心肌增厚)</strong><br>
+                近期文獻指出，貓可能因急性心肌損傷 (如心肌炎、弓蟲感染 Toxoplasma gondii 等) 出現類似 HCM 的左心室增厚並引發心衰竭。其重要特徵為隨時間具備<strong>可逆性 (Reversible)</strong>，在致病因子消除後，心臟超音波結構與臨床症狀可能完全恢復正常。</p>
+            </div>
+        </section>
+
+        <!-- 2. 分期系統 -->
+        <section id="staging" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="bg-indigo-100 p-3 rounded-lg text-indigo-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-indigo-500 pb-1 inline-block">ACVIM 貓心肌病 A-D 分期系統</h2>
+            </div>
+
+            <div class="relative wrap overflow-hidden p-2">
+                <!-- 線條 -->
+                <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%;"></div>
+                
+                <!-- Stage A -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-300 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">A</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-md border-t-4 border-gray-400 w-5/12 px-6 py-4 stage-card transition duration-300">
+                        <h3 class="font-bold text-gray-800 text-lg">好發族群 (具高風險但無異常)</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-600 mt-2">
+                            具品種易感性 (如緬因貓、布偶貓、斯芬克斯貓等) 或已知帶有基因突變。目前<strong>無任何心臟結構異常或臨床症狀</strong>。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stage B1 -->
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-green-500 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">B1</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-md border-t-4 border-green-500 w-5/12 px-6 py-4 stage-card transition duration-300 text-right">
+                        <h3 class="font-bold text-gray-800 text-lg">亞臨床期 (左心房正常/輕度擴大)</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-600 mt-2">
+                            心臟超音波證實有心肌病變 (如 LV 增厚)，但<strong>無臨床症狀</strong>。左心房正常或僅輕度擴大。此階段發生心衰竭或動脈血栓的風險低。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Stage B2 -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-yellow-500 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">B2</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-md border-t-4 border-yellow-500 w-5/12 px-6 py-4 stage-card transition duration-300">
+                        <h3 class="font-bold text-gray-800 text-lg">亞臨床期 (左心房中度/重度擴大)</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-600 mt-2">
+                            無臨床症狀，但心臟超音波顯示<strong>左心房中度至重度擴大</strong>。此階段發展為鬱血性心衰竭 (CHF) 或動脈血栓栓塞 (ATE) 的風險顯著增加。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stage C -->
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-orange-500 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">C</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-md border-t-4 border-orange-500 w-5/12 px-6 py-4 stage-card transition duration-300 text-right">
+                        <h3 class="font-bold text-gray-800 text-lg">臨床症狀期 (心臟失代償)</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-600 mt-2">
+                            出現（或曾出現）<strong>鬱血性心衰竭 (CHF)</strong> 症狀 (如肺水腫、胸腔積液引起的呼吸困難)，或發生過 <strong>動脈血栓栓塞 (ATE)</strong>。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stage D -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-red-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">D</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-md border-t-4 border-red-600 w-5/12 px-6 py-4 stage-card transition duration-300">
+                        <h3 class="font-bold text-gray-800 text-lg">難治型 / 頑固性心衰竭</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-600 mt-2">
+                            對標準心衰竭藥物治療產生抗性或反應不佳 (Refractory CHF)，需要極高劑量的利尿劑或合併多種進階藥物才能勉強控制症狀。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 治療與管理 -->
+        <section id="management" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="bg-green-100 p-3 rounded-lg text-green-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-green-500 pb-1 inline-block">各階段常規治療與管理原則</h2>
+            </div>
+
+            <div class="overflow-x-auto bg-white rounded-xl shadow-md">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-100 text-gray-700">
+                            <th class="py-4 px-6 border-b-2 font-bold w-1/6">分期</th>
+                            <th class="py-4 px-6 border-b-2 font-bold w-1/3">藥物治療建議</th>
+                            <th class="py-4 px-6 border-b-2 font-bold">臨床管理重點與注意事項</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-4 px-6 font-bold text-gray-500">Stage A</td>
+                            <td class="py-4 px-6 text-sm">無需藥物治療。</td>
+                            <td class="py-4 px-6 text-sm">
+                                基因篩檢 (若有提供)，強烈不建議已知帶原的動物進行繁殖。建議定期健康檢查與心臟聽診。
+                            </td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-4 px-6 font-bold text-green-500">Stage B1</td>
+                            <td class="py-4 px-6 text-sm">通常<strong>不建議</strong>使用任何藥物。<br>(無充分實證顯示 ACE 抑制劑 或 β-阻斷劑 能延緩此階段之疾病進展)</td>
+                            <td class="py-4 px-6 text-sm">
+                                每年定期回診進行心臟超音波追蹤。居家照護重點在於維持穩定環境，避免過度緊迫。
+                            </td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 bg-yellow-50/30">
+                            <td class="py-4 px-6 font-bold text-yellow-600">Stage B2</td>
+                            <td class="py-4 px-6 text-sm">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>首選抗血栓藥物：</strong> Clopidogrel (如：保栓通 Plavix)。</li>
+                                    <li>無臨床症狀時，不常規建議使用利尿劑。</li>
+                                    <li>若有嚴重的 SAM (收縮期前向運動)，可考慮使用 Atenolol 等 β-阻斷劑 (Beta-blocker) 減輕流出道阻塞。</li>
+                                </ul>
+                            </td>
+                            <td class="py-4 px-6 text-sm">
+                                此階段血栓風險大增，<strong>預防動脈血栓 (ATE) 為首要任務</strong>。
+                                <div class="my-2 bg-purple-50 border-l-2 border-purple-400 p-2.5 text-xs text-purple-800 rounded-r shadow-sm">
+                                    <strong>💡 Clopidogrel 基因抗性注意：</strong><br>研究統計指出，高達約 67% 的貓咪帶有特定的 <strong>P2RY1 (A236G) 基因變異</strong>（約 51% 為單套變異、16.3% 為雙套變異），導致臨床上有 20%~30% 的貓咪對此藥產生抗性、反應不佳。建議家屬可諮詢醫師安排「基因檢測」，若確認帶有此變異，能及早為毛孩調整預防血栓的治療計畫（例如合併或替換其他抗凝血藥物）。
+                                </div>
+                                飼主需學會計算<strong>休息/睡眠呼吸速率 (RRR/SRR)</strong>，若持續大於 30 次/分，可能為鬱血性心衰竭早期徵兆。
+                            </td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-4 px-6 font-bold text-orange-500">Stage C (慢性維持)</td>
+                            <td class="py-4 px-6 text-sm">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>利尿劑：</strong> Furosemide (口服，積極尋求最低有效劑量)。</li>
+                                    <li><strong>抗血栓藥物：</strong> Clopidogrel。</li>
+                                    <li><strong>其他(視臨床情況)：</strong> Spironolactone (醛固酮拮抗劑/具抗纖維化作用)、ACE 抑制劑 (如 Benazepril/Enalapril)、Pimobendan (若有收縮功能障礙，且無嚴重流出道阻塞時考慮使用)。</li>
+                                </ul>
+                            </td>
+                            <td class="py-4 px-6 text-sm">
+                                嚴密監控居家睡眠呼吸速率。需定期抽血監測腎功能指數與電解質 (因長期使用利尿劑)。改善環境，減少緊迫，保持飲食穩定。<br>
+                                <span class="text-xs text-red-500">*備註：Pimobendan 於典型 HCM (心壁厚且收縮正常/過度) 中的常規使用仍具爭議，但對於心衰竭且合併收縮功能下降的貓隻可能有益。</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6 font-bold text-red-600">Stage D</td>
+                            <td class="py-4 px-6 text-sm">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li><strong>利尿劑升級：</strong> 增加 Furosemide 頻率或劑量；或考慮替換為 <strong>Torsemide</strong> (效力約為 Furosemide 的 10 倍)。</li>
+                                    <li>合併 Spironolactone 進行雙重利尿劑介入 (Sequential nephron blockade)。</li>
+                                    <li>可考慮加入 Pimobendan 協助心輸出。</li>
+                                </ul>
+                            </td>
+                            <td class="py-4 px-6 text-sm">
+                                總體預後較差，治療重點為<strong>維持生活品質 (Quality of Life, QoL)</strong> 與安寧照護/緩和醫療。需更頻繁監測腎衰竭風險。
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 4. 急診處置 -->
+        <section id="emergencies" class="mb-16 scroll-mt-24">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="bg-red-100 p-3 rounded-lg text-red-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-red-500 pb-1 inline-block">急診與危及生命狀況處置</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 急性鬱血性心衰竭 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-400">
+                    <h3 class="text-xl font-bold text-red-600 mb-4 flex items-center gap-2">
+                        <span>🫁 急性鬱血性心衰竭 (Acute CHF)</span>
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4">臨床表現為嚴重呼吸困難、張口呼吸、急性肺水腫或胸腔積液。</p>
+                    
+                    <div class="bg-red-50 p-4 rounded-lg mb-4">
+                        <h4 class="font-bold text-red-800 mb-2">核心處置：F-O-S 方案</h4>
+                        <ul class="space-y-2 text-sm text-gray-800">
+                            <li><span class="font-bold">Furosemide (利尿劑)：</span> 靜脈 (IV) 或肌肉 (IM) 注射，首劑 1-2 mg/kg，視呼吸窘迫狀況每 1-2 小時重複給予。</li>
+                            <li><span class="font-bold">Oxygen (氧氣給予)：</span> 提供高濃度氧氣 (氧氣籠或面罩)，<strong>嚴格避免過度保定所造成的緊迫</strong>。</li>
+                            <li><span class="font-bold">Sedation (鎮靜)：</span> 貓咪急診的關鍵步驟。給予 Butorphanol 輕度鎮靜，以減少恐懼與掙扎帶來的龐大氧氣消耗。</li>
+                        </ul>
+                    </div>
+                    <p class="text-sm text-gray-700">
+                        <strong>⚠️ 胸腔穿刺 (Thoracocentesis)：</strong> 若重點式超音波 (TFAST) 確認有中度至重度的胸腔積液，<strong>立即抽出積液</strong>是挽救生命最快的方法，對改善呼吸窘迫的效果遠優於單用利尿劑。
+                    </p>
+                </div>
+
+                <!-- 動脈血栓栓塞 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-purple-500">
+                    <h3 class="text-xl font-bold text-purple-600 mb-4 flex items-center gap-2">
+                        <span>🩸 動脈血栓栓塞 (FATE / ATE)</span>
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4">血栓脫落阻塞主動脈分支 (最常發生於腹主動脈分叉處)，導致急性後肢癱瘓、劇烈疼痛、肉墊發紺且無股動脈脈搏。</p>
+                    
+                    <div class="bg-purple-50 p-4 rounded-lg mb-4">
+                        <h4 class="font-bold text-purple-800 mb-2">核心處置：</h4>
+                        <ul class="space-y-2 text-sm text-gray-800">
+                            <li><span class="font-bold">止痛 (Analgesia)：</span> <strong>臨床處置的首要任務。</strong> 建議給予純 μ 接受體致效劑鴉片類藥物 (Pure mu-opioid agonists, 如 Methadone 或 Fentanyl)，一般的 Buprenorphine 對於此類劇烈疼痛可能效果不足。</li>
+                            <li><span class="font-bold">抗凝血治療：</span> 立即給予肝素 (Heparin，如 UFH 或低分子量肝素 LMWH/Dalteparin)。</li>
+                            <li><span class="font-bold">抗血小板治療：</span> 待生命徵象與狀況穩定後，開始口服 Clopidogrel。</li>
+                        </ul>
+                    </div>
+                    <div class="text-sm text-gray-700 space-y-2">
+                        <p class="border-l-4 border-red-500 pl-2">
+                            <strong>⚠️ 殘酷的預後 (Prognosis)：</strong> 貓咪的動脈血栓一旦發生，整體預後非常不樂觀。統計顯示<strong>存活出院率通常僅約 30%~45%</strong>，且即使順利熬過急性期出院，後續復發率仍極高。許多患貓會因為無法控制的劇痛、嚴重的後肢缺血壞死，或併發急性心衰竭，而必須面臨安樂死的抉擇。這也是為何在 Stage B2 階段「預防血栓」會是首要任務。
+                        </p>
+                        <p class="border-l-4 border-purple-400 pl-2">
+                            <strong>⚠️ 臨床注意事項：</strong> 貓極易併發急性心衰竭及再灌注損傷 (Reperfusion injury，常引發致命性高血鉀)，需密切監控。使用血栓溶解劑 (如 tPA) 的出血風險極高且存活率並未顯著優於傳統保守治療，ACVIM 指南不強烈建議常規使用。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dietary info mentioned in provided PDF -->
+        <section class="mb-10">
+            <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 text-sm text-gray-700 space-y-3">
+                <h4 class="font-bold text-blue-800 mb-2">🍽️ 關於飲食管理與營養支持 (文獻見解)</h4>
+                <p>雖然針對心肌病貓的特殊飲食干預仍在學術研究階段，但文獻探討了限制澱粉與補充 Omega-3 脂肪酸 (EPA+DHA) 等因子的潛在影響。目前臨床上維持穩定的體態評分、避免心因性惡病質 (Cardiac Cachexia)，以及給予充足的優質蛋白質，對慢性心衰竭的管理仍是最基礎的原則。</p>
+                
+                <div class="bg-white p-5 rounded-lg border border-blue-200 mt-4 shadow-sm">
+                    <h5 class="font-bold text-blue-700 mb-2 flex items-center gap-2">
+                        <span>📌 皇家貓心臟病早期處方飼料 (Early Cardiac EC45) 相關研究</span>
+                    </h5>
+                    <p class="mb-2 text-gray-600">根據 Freeman 等人 (2014) 針對無症狀 HCM (Stage Ib) 貓咪進行的隨機對照試驗，該研究測試的特定營養配方即為後來商品化的 <strong>皇家貓心臟病早期處方 EC45</strong>。研究發現：</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li><strong>心臟結構變化：</strong> 在為期 6 個月的飲食介入期間，該配方<strong>未能</strong>顯著逆轉或減少左心室游離壁 (LVFW) 或室間隔 (IVS) 的厚度。</li>
+                        <li><strong>心臟生物標記顯著改善：</strong> 儘管物理結構未見顯著改變，但食用該測試配方的貓咪，其血清中的心臟生物標記 <strong>N 端前腦鈉肽 (NT-proBNP，反映心肌牽張力與壁壓力)</strong> 與 <strong>高敏度心肌肌鈣蛋白 I (hs-cTnI，反映心肌細胞損傷程度)</strong> 均呈現<strong>顯著下降</strong> (P < 0.05)。</li>
+                        <li><strong>臨床意義：</strong> 該結果表明透過特定營養配方的介入（包含調節蛋白質、脂肪及碳水化合物比例），雖然無法在短時間內改變 HCM 增厚的心肌結構，但可能在細胞微觀層面上有效減輕了心肌的壓力與實質損傷。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 text-center text-sm">
+        <div class="container mx-auto px-6">
+            <p class="mb-2">此指南依據 <strong>ACVIM 2020 貓心肌病共識聲明</strong> 及相關獸醫內科實證文獻整理。</p>
+            <p class="text-gray-500">免責聲明：本網頁僅供獸醫臨床人員參考與學術教學用途，不能取代主治獸醫師的實際臨床診斷與個別化治療決策。</p>
+        </div>
+    </footer>
+
+
+    <!-- ==========================================
+         嵌入的「HCM 鑑別診斷與排除工具」 Modal (隱藏)
+         ========================================== -->
+    <div id="hcm-tool-modal" class="fixed inset-0 z-50 hidden bg-gray-900 bg-opacity-60 overflow-y-auto flex justify-center items-start pt-6 pb-10 transition-opacity backdrop-blur-sm">
+        <div class="bg-gray-50 max-w-4xl w-full mx-4 rounded-xl shadow-2xl overflow-hidden border border-gray-200 modal-enter modal-enter-active">
+            
+            <!-- Header Section of Tool -->
+            <div class="bg-slate-800 text-white p-6 relative flex justify-between items-center">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-pink-500 to-red-500"></div>
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-1 tracking-wide">
+                        診斷貓的肥厚心肌病 (HCM)
+                    </h2>
+                    <p class="text-red-300 text-sm md:text-base font-semibold">
+                        不只是心臟超音波：必須排除以下可能造成左心室肥厚的疾病
+                    </p>
+                </div>
+                <button onclick="closeTool()" class="bg-slate-700 hover:bg-red-500 text-white p-2 rounded-full transition-colors focus:outline-none" title="關閉工具">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <!-- Content Section of Tool -->
+            <div class="p-6 md:p-8 grid gap-6">
+                <p class="text-gray-600 text-sm mb-2 border-l-4 border-slate-400 pl-3">
+                    點擊 <strong>「排除」</strong> 按鈕標記已排除的疾病；點擊 <strong>「待確認」</strong> 提醒自己尚未進行相關檢驗。
+                </p>
+
+                <!-- 診斷卡片 1：甲狀腺功能亢進 -->
+                <div class="diagnostic-card bg-white p-5 rounded-lg border-l-4 border-l-orange-500 shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-start mb-3 flex-wrap gap-4">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-xl font-bold text-slate-800">1. 甲狀腺功能亢進 (Hyperthyroidism)</h3>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="btn-pending border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-yellow-50 focus:outline-none transition" onclick="togglePending(this)">待確認 (Pending)</button>
+                            <button class="btn-exclude border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-green-50 focus:outline-none transition" onclick="toggleExclude(this)">排除 (Unlikely)</button>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-2">老年貓常見的內分泌疾病。過多的甲狀腺素會導致高動力循環與心肌代償性肥厚。</p>
+                    <div class="bg-orange-50 text-orange-800 text-xs px-3 py-2 rounded">
+                        <strong>臨床行動：</strong> 抽血檢查總甲狀腺素 (Total T4, TT4)。
+                    </div>
+                    <div class="pending-msg hidden mt-3 text-sm text-yellow-700 font-semibold flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        等待檢驗結果或計畫進行檢查
+                    </div>
+                </div>
+
+                <!-- 診斷卡片 2：全身性高血壓 -->
+                <div class="diagnostic-card bg-white p-5 rounded-lg border-l-4 border-l-red-500 shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-start mb-3 flex-wrap gap-4">
+                        <h3 class="text-xl font-bold text-slate-800">2. 全身性高血壓 (Systemic Hypertension)</h3>
+                        <div class="flex gap-2">
+                            <button class="btn-pending border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-yellow-50 focus:outline-none transition" onclick="togglePending(this)">待確認 (Pending)</button>
+                            <button class="btn-exclude border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-green-50 focus:outline-none transition" onclick="toggleExclude(this)">排除 (Unlikely)</button>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-2">血壓長期升高導致左心室壓力負荷增加，產生向心性肥厚。常見於慢性腎病 (CKD) 或甲亢繼發。</p>
+                    <div class="bg-red-50 text-red-800 text-xs px-3 py-2 rounded">
+                        <strong>臨床行動：</strong> 測量收縮壓 (SBP)，並檢查眼底有無高血壓視網膜病變 (Target Organ Damage, TOD)。
+                    </div>
+                    <div class="pending-msg hidden mt-3 text-sm text-yellow-700 font-semibold flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        等待檢驗結果或計畫進行檢查
+                    </div>
+                </div>
+
+                <!-- 診斷卡片 3：脫水/假性肥厚 -->
+                <div class="diagnostic-card bg-white p-5 rounded-lg border-l-4 border-l-blue-400 shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-start mb-3 flex-wrap gap-4">
+                        <h3 class="text-xl font-bold text-slate-800">3. 脫水 / 假性肥厚 (Dehydration)</h3>
+                        <div class="flex gap-2">
+                            <button class="btn-pending border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-yellow-50 focus:outline-none transition" onclick="togglePending(this)">待確認 (Pending)</button>
+                            <button class="btn-exclude border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-green-50 focus:outline-none transition" onclick="toggleExclude(this)">排除 (Unlikely)</button>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-2">嚴重的脫水或低血容會導致心室腔室容積減少 (Pseudohypertrophy)，使心室壁在超音波下「看起來」相對變厚。</p>
+                    <div class="bg-blue-50 text-blue-800 text-xs px-3 py-2 rounded">
+                        <strong>臨床行動：</strong> 評估水合狀態 (如皮膚張力、PCV/TP)，校正脫水後重新進行心臟超音波評估。
+                    </div>
+                    <div class="pending-msg hidden mt-3 text-sm text-yellow-700 font-semibold flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        等待檢驗結果或計畫進行檢查
+                    </div>
+                </div>
+
+                <!-- 診斷卡片 4：暫時性心肌增厚 (TMT) -->
+                <div class="diagnostic-card bg-white p-5 rounded-lg border-l-4 border-l-yellow-400 shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-start mb-3 flex-wrap gap-4">
+                        <h3 class="text-xl font-bold text-slate-800">4. 暫時性心肌增厚 (Transient Myocardial Thickening)</h3>
+                        <div class="flex gap-2">
+                            <button class="btn-pending border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-yellow-50 focus:outline-none transition" onclick="togglePending(this)">待確認 (Pending)</button>
+                            <button class="btn-exclude border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-green-50 focus:outline-none transition" onclick="toggleExclude(this)">排除 (Unlikely)</button>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-2">一種表現與 HCM 極度相似（Phenotype mimics HCM）的特殊狀況，常伴隨急性充血性心衰竭。最重要特徵是具有「可逆性 (Reversible)」，數週或數月後心壁厚度可恢復正常。</p>
+                    <div class="bg-yellow-50 text-yellow-800 text-xs px-3 py-2 rounded">
+                        <strong>臨床行動：</strong> 長期追蹤超音波結構變化以確認其可逆性，給予支持療法。
+                    </div>
+                    <div class="pending-msg hidden mt-3 text-sm text-yellow-700 font-semibold flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        等待檢驗結果或計畫進行檢查
+                    </div>
+                </div>
+
+                <!-- 診斷卡片 5：心肌炎 -->
+                <div class="diagnostic-card bg-white p-5 rounded-lg border-l-4 border-l-pink-500 shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-start mb-3 flex-wrap gap-4">
+                        <h3 class="text-xl font-bold text-slate-800">5. 心肌炎 (Myocarditis)</h3>
+                        <div class="flex gap-2">
+                            <button class="btn-pending border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-yellow-50 focus:outline-none transition" onclick="togglePending(this)">待確認 (Pending)</button>
+                            <button class="btn-exclude border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-green-50 focus:outline-none transition" onclick="toggleExclude(this)">排除 (Unlikely)</button>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-2">急性心肌炎（如弓蟲 Toxoplasma gondii 感染）會引起心肌間質水腫與炎性浸潤，導致心壁增厚，常是引發上述 TMT 的潛在病因。</p>
+                    <div class="bg-pink-50 text-pink-800 text-xs px-3 py-2 rounded">
+                        <strong>臨床行動：</strong> 監測 <strong>cTnI (高敏度心肌肌鈣蛋白 I)</strong> 判斷心肌損傷程度 (通常會顯著上升)；並考慮進行傳染病篩檢 (如弓蟲血清學)。
+                    </div>
+                    <div class="pending-msg hidden mt-3 text-sm text-yellow-700 font-semibold flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        等待檢驗結果或計畫進行檢查
+                    </div>
+                </div>
+
+                <!-- 診斷卡片 6：肢端肥大症 -->
+                <div class="diagnostic-card bg-white p-5 rounded-lg border-l-4 border-l-purple-500 shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-start mb-3 flex-wrap gap-4">
+                        <h3 class="text-xl font-bold text-slate-800">6. 肢端肥大症 (Acromegaly / Hypersomatotropism)</h3>
+                        <div class="flex gap-2">
+                            <button class="btn-pending border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-yellow-50 focus:outline-none transition" onclick="togglePending(this)">待確認 (Pending)</button>
+                            <button class="btn-exclude border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-green-50 focus:outline-none transition" onclick="toggleExclude(this)">排除 (Unlikely)</button>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-2">腦下垂體腫瘤分泌過多生長激素，不僅導致嚴重的胰島素阻抗型糖尿病，更會直接刺激心臟組織增生與肥厚。</p>
+                    <div class="bg-purple-50 text-purple-800 text-xs px-3 py-2 rounded">
+                        <strong>臨床行動：</strong> 檢驗血清 <strong>IGF-1 (類胰島素生長因子-1)</strong> 濃度，特別是在患有難控型糖尿病的貓咪。
+                    </div>
+                    <div class="pending-msg hidden mt-3 text-sm text-yellow-700 font-semibold flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        等待檢驗結果或計畫進行檢查
+                    </div>
+                </div>
+                
+                <!-- 診斷卡片 7：主動脈狹窄 -->
+                <div class="diagnostic-card bg-white p-5 rounded-lg border-l-4 border-l-indigo-500 shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-start mb-3 flex-wrap gap-4">
+                        <h3 class="text-xl font-bold text-slate-800">7. 主動脈狹窄 (Fixed Aortic Stenosis)</h3>
+                        <div class="flex gap-2">
+                            <button class="btn-pending border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-yellow-50 focus:outline-none transition" onclick="togglePending(this)">待確認 (Pending)</button>
+                            <button class="btn-exclude border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-green-50 focus:outline-none transition" onclick="toggleExclude(this)">排除 (Unlikely)</button>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-2">先天性心臟結構異常，左心室流出道存在「固定阻塞 (Fixed LVOTO)」而非 SAM 的動態阻塞，導致壓力負荷增加而產生向心性肥厚。</p>
+                    <div class="bg-indigo-50 text-indigo-800 text-xs px-3 py-2 rounded">
+                        <strong>臨床行動：</strong> 利用都卜勒超音波評估主動脈瓣膜結構形態與最大血流速度。
+                    </div>
+                    <div class="pending-msg hidden mt-3 text-sm text-yellow-700 font-semibold flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        等待檢驗結果或計畫進行檢查
+                    </div>
+                </div>
+
+                <!-- 診斷卡片 8：浸潤性心肌疾病 -->
+                <div class="diagnostic-card bg-white p-5 rounded-lg border-l-4 border-l-teal-500 shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-start mb-3 flex-wrap gap-4">
+                        <h3 class="text-xl font-bold text-slate-800">8. 浸潤性心肌疾病 (Infiltrative Myocardial Disease)</h3>
+                        <div class="flex gap-2">
+                            <button class="btn-pending border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-yellow-50 focus:outline-none transition" onclick="togglePending(this)">待確認 (Pending)</button>
+                            <button class="btn-exclude border border-gray-300 text-gray-600 px-3 py-1 text-sm rounded-md hover:bg-green-50 focus:outline-none transition" onclick="toggleExclude(this)">排除 (Unlikely)</button>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-2">心肌細胞間隙被異常物質或細胞佔據（例如：淋巴瘤 Lymphoma、其他腫瘤性浸潤、或特定肉芽腫性疾病），導致心壁物理性增厚。</p>
+                    <div class="bg-teal-50 text-teal-800 text-xs px-3 py-2 rounded">
+                        <strong>臨床行動：</strong> 尋找有無其他全身性腫瘤病灶、淋巴結腫大，必要時進行細胞學或影像學掃描。
+                    </div>
+                    <div class="pending-msg hidden mt-3 text-sm text-yellow-700 font-semibold flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        等待檢驗結果或計畫進行檢查
+                    </div>
+                </div>
+
+            </div>
+            <!-- Footer of Tool -->
+            <div class="bg-gray-100 p-4 text-center border-t border-gray-200">
+                <button onclick="closeTool()" class="bg-slate-800 text-white px-6 py-2 rounded hover:bg-slate-700 font-medium transition-colors">
+                    完成並返回指南
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript 負責 Modal 的開關與按鈕邏輯 -->
+    <script>
+        // 開啟 Modal
+        function openTool() {
+            const modal = document.getElementById('hcm-tool-modal');
+            modal.classList.remove('hidden');
+            // 防止背景滾動
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        // 關閉 Modal
+        function closeTool() {
+            const modal = document.getElementById('hcm-tool-modal');
+            modal.classList.add('hidden');
+            // 恢復背景滾動
+            document.body.style.overflow = '';
+        }
+
+        // 切換「排除」狀態
+        function toggleExclude(btn) {
+            const card = btn.closest('.diagnostic-card');
+            const pendingBtn = card.querySelector('.btn-pending');
+            const pendingMsg = card.querySelector('.pending-msg');
+
+            // 如果目前尚未排除 -> 設定為已排除
+            if (!card.classList.contains('opacity-50')) {
+                card.classList.add('opacity-50', 'bg-gray-200');
+                card.classList.remove('bg-white');
+                btn.classList.add('bg-green-100', 'text-green-800', 'border-green-500', 'font-bold');
+                btn.innerHTML = '已排除 ✓';
+
+                // 取消 Pending 狀態
+                pendingBtn.classList.remove('bg-yellow-100', 'text-yellow-800', 'border-yellow-500', 'font-bold');
+                pendingMsg.classList.add('hidden');
+            } 
+            // 如果已經排除 -> 恢復原狀
+            else {
+                card.classList.remove('opacity-50', 'bg-gray-200');
+                card.classList.add('bg-white');
+                btn.classList.remove('bg-green-100', 'text-green-800', 'border-green-500', 'font-bold');
+                btn.innerHTML = '排除 (Unlikely)';
+            }
+        }
+
+        // 切換「待確認」狀態
+        function togglePending(btn) {
+            const card = btn.closest('.diagnostic-card');
+            const excludeBtn = card.querySelector('.btn-exclude');
+            const pendingMsg = card.querySelector('.pending-msg');
+
+            // 如果目前沒有 Pending 訊息 -> 設定為 Pending
+            if (pendingMsg.classList.contains('hidden')) {
+                pendingMsg.classList.remove('hidden');
+                btn.classList.add('bg-yellow-100', 'text-yellow-800', 'border-yellow-500', 'font-bold');
+
+                // 移除 Exclude 狀態
+                card.classList.remove('opacity-50', 'bg-gray-200');
+                card.classList.add('bg-white');
+                excludeBtn.classList.remove('bg-green-100', 'text-green-800', 'border-green-500', 'font-bold');
+                excludeBtn.innerHTML = '排除 (Unlikely)';
+            } 
+            // 如果已經 Pending -> 恢復原狀
+            else {
+                pendingMsg.classList.add('hidden');
+                btn.classList.remove('bg-yellow-100', 'text-yellow-800', 'border-yellow-500', 'font-bold');
+            }
+        }
+    </script>
+</body>
+</html>
